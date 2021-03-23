@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    'linuxuno || linuxdos'
+    label 'linuxuno || linuxdos'
   }
   
   stage('SCM checkout') {
