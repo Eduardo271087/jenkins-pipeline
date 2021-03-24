@@ -8,7 +8,7 @@ pipeline {
       steps {
         git branch: '${GIT_BRANCH}',
             credentialsId: 'credenciales-git',
-            url: 'ssh://git@git.smartmatic.net:32323/engineering_client_side_b/esbu_dev_saes_cpp_framework.git'
+            url: '${GIT_REPO_URL}'
       }
     }
 
