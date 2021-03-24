@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'linuxdos || linuxtres'
+    label 'linux-agent-one || linux-agent-two'
   }
   
   stages {
