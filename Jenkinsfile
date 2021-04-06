@@ -3,6 +3,10 @@ pipeline {
     label 'framework-agent'
   }
   
+  environment {
+    PATH = "/usr/local/bin:$PATH"
+  }
+  
   stages {
     stage('SCM checkout') {
       steps {
@@ -14,6 +18,7 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'whereis cmake'
         sh 'echo $PATH'
         sh './scripts/clean.sh'
         sh './scripts/create-debug-makefiles.sh'
