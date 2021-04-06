@@ -7,7 +7,7 @@ pipeline {
     stage('SCM checkout') {
       steps {
         git branch: '${GIT_BRANCH}',
-            credentialsId: 'credenciales-git',
+            credentialsId: 'Git_Credentials',
             url: '${GIT_REPO_URL}'
       }
     }
