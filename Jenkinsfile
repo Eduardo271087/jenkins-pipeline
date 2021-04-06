@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'linux-agent-one || linux-agent-two'
+    label 'jenkins-slave'
   }
   
   stages {
