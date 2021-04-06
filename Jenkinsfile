@@ -3,10 +3,6 @@ pipeline {
     label 'framework-agent'
   }
   
-  tools {
-    CMake "CMake"
-  }
-  
   stages {
     stage('SCM checkout') {
       steps {
@@ -18,6 +14,7 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'echo $PATH'
         sh './scripts/clean.sh'
         sh './scripts/create-debug-makefiles.sh'
         sh './scripts/make.sh'
