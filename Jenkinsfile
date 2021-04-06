@@ -14,6 +14,8 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'whoami'
+        sh 'whereis cmake'
         sh './scripts/clean.sh'
         sh './scripts/create-debug-makefiles.sh'
         sh './scripts/make.sh'
