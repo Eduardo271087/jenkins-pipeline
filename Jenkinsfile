@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      label framework-agent
+      label 'framework-agent'
     }
   }
   
