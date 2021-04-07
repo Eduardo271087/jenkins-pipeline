@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    kubernetes {
-      inheritFrom 'framework-agent'
-    }
+    label 'framework-agent'
   }
   
   stages {
