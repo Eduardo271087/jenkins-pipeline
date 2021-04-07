@@ -1,3 +1,5 @@
+@Library("k8sagent") _
+
 pipeline {
   agent {
     kubernetes(k8sagent(name: 'mini+pg'))
