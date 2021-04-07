@@ -1,8 +1,8 @@
-@Library "github.com/liejuntao001/jenkins-k8sagent-lib" _
-
 pipeline {
   agent {
-    kubernetes(k8sagent(name: 'mini+pg'))
+    kubernetes {
+      label framework-agent
+    }
   }
   
   stages {
