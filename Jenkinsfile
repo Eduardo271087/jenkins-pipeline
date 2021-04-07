@@ -1,10 +1,12 @@
 pipeline {
-  agent {
-    label 'framework-agent' 
-  }
+  agent none
   
   stages {
     stage('SCM checkout') {
+      agent {
+        label 'framework-agent' 
+      }
+      
       steps {
         git branch: '${GIT_BRANCH}',
             credentialsId: 'Git_Credentials',
@@ -13,6 +15,10 @@ pipeline {
     }
 
     stage('Build') {
+      agent {
+        label 'framework-agent' 
+      }
+      
       steps {
         sh 'whereis cmake'
         sh 'echo $PATH'
