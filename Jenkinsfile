@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      label 'framework-agent'
+      inheritFrom 'framework-agent'
     }
   }
   
