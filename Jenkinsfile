@@ -1,18 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      yaml '''
-        apiVersion: v1
-        kind: Pod
-        spec:
-          containers:
-            - name: framework-agent
-              image: linux-environment:v1
-          hostAliases:
-            - ip: 172.17.4.194
-              hostnames:
-                - git.smartmatic.net
-      '''
+      yaml 'framework-agent.yaml'
       defaultContainer 'framework-agent'
     }
   }
