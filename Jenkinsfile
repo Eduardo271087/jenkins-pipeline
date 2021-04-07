@@ -1,6 +1,8 @@
 pipeline {
   agent {
-    label "framework-agent"
+    kubernetes {
+      framework-agent
+    }
   }
   
   stages {
