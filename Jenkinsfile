@@ -1,4 +1,4 @@
-@Library "k8sagent" _
+@Library("github.com/liejuntao001/jenkins-k8sagent-lib") _
 
 pipeline {
   agent {
