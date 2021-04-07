@@ -1,10 +1,14 @@
 pipeline {
   agent {
-    label 'agent'
+    label 'framework-agent'
   }
   
   stages {
     stage('SCM checkout') {
+      agent {
+        label 'framework-agent'
+      }
+      
       steps {
         git branch: '${GIT_BRANCH}',
             credentialsId: 'Git_Credentials',
@@ -13,6 +17,10 @@ pipeline {
     }
 
     stage('Build') {
+      agent {
+        label 'framework-agent'
+      }
+      
       steps {
         sh './scripts/clean.sh'
         sh './scripts/create-debug-makefiles.sh'
