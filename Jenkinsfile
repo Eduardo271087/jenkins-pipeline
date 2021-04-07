@@ -1,4 +1,4 @@
-@Library("k8sagent") _
+@Library "k8sagent" _
 
 pipeline {
   agent {
