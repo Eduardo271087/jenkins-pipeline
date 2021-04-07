@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'framework-agent'
+    label 'agent'
   }
   
   stages {
