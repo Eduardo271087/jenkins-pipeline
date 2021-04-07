@@ -3,10 +3,6 @@ pipeline {
     label 'framework-agent'
   }
   
-  environment {
-    PATH = "/usr/local/bin:$PATH"
-  }
-  
   stages {
     stage('SCM checkout') {
       steps {
