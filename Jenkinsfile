@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      yaml 'framework-agent.yaml'
+      yamlFile 'framework-agent.yaml'
       defaultContainer 'framework-agent'
     }
   }
