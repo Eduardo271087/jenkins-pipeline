@@ -1,6 +1,16 @@
 pipeline {
   agent {
-    label 'framework-agent'
+    kubernetes {
+      yaml '''
+        apiVersion: v1
+        kind: Pod
+        spec:
+          containers:
+          - name: framework-agent
+            image: linux-environment:v1
+      '''
+      defaultContainer: 'framework-agent'
+    }
   }
   
   stages {
