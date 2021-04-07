@@ -9,7 +9,7 @@ pipeline {
           - name: framework-agent
             image: linux-environment:v1
       '''
-      defaultContainer: 'framework-agent'
+      defaultContainer 'framework-agent'
     }
   }
   
