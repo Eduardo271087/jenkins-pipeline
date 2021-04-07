@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'framework-agent' 
+  }
   
   stages {
     stage('SCM checkout') {
