@@ -6,8 +6,12 @@ pipeline {
         kind: Pod
         spec:
           containers:
-          - name: framework-agent
-            image: linux-environment:v1
+            - name: framework-agent
+              image: linux-environment:v1
+          hostAliases:
+            - ip: 172.17.4.194
+              hostnames:
+                - git.smartmatic.net
       '''
       defaultContainer 'framework-agent'
     }
