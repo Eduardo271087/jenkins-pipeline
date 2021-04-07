@@ -2,7 +2,7 @@ NODE_NAME = null
 
 node('master') {
     stage('Choose') {
-      NODE_NAME = ${env.NODE_NAME}
+      NODE_NAME = "${env.NODE_NAME}"
     }
 }
 
