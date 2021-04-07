@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    kubernetes {
-      framework-agent
-    }
+    kubernetes(k8sagent(name: 'mini+pg'))
   }
   
   stages {
