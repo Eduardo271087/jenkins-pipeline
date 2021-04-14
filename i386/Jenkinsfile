@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      yamlFile 'framework-environment.yaml'
+      yamlFile 'i386/framework-environment.yaml'
       defaultContainer 'framework-environment-i386'
     }
   }
