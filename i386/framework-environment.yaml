@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-    - name: framework-agent
-      image: linux-environment:v1
+    - name: framework-environment-i386
+      image: framework-environment-i386:v1
   hostAliases:
     - ip: 172.17.4.194
       hostnames:
