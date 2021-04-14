@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh './scripts/clean.sh'
         sh './scripts/create-debug-makefiles.sh'
-        sh './scripts/make.sh'
+        sh './scripts/make.sh -j8'
         sh './scripts/create-deb-package.sh'
       }
     }
