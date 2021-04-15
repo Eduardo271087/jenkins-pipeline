@@ -11,6 +11,7 @@ spec:
     limits:
       memory: 1Gi
       cpu: 2
+  restartPolicy: Never
   hostAliases:
     - ip: 172.17.4.194
       hostnames:
